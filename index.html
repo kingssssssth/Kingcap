@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KingCap | Gorras Premium</title>
+
+    <meta name="description" content="KingCap - Gorras premium con estilo. Compra tus gorras favoritas y recibe atención por WhatsApp.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span>K</span>ing<span>C</span>ap
+        </div>
+
+        <nav class="navbar">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Gorras</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <button class="cart-button" id="openCart">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span>Carrito</span>
+
+            <b id="cartCount">0</b>
+
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                KINGCAP
+            </span>
+
+            <h1>
+                TU ESTILO.
+                <br>
+                <span>TU GORRA.</span>
+            </h1>
+
+            <p>
+                Descubre nuestra colección de gorras y lleva tu estilo
+                al siguiente nivel.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#productos" class="btn-primary">
+                    Ver colección
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a
+                    href="https://wa.me/573219272653?text=Hola%20KingCap,%20quiero%20ver%20las%20gorras."
+                    target="_blank"
+                    class="btn-whatsapp">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    WhatsApp
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-decoration">
+
+            <div class="hero-circle"></div>
+
+            <div class="hero-cap">
+                🧢
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BENEFICIOS
+    ========================== -->
+
+    <section class="benefits">
+
+        <div class="benefit">
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <div>
+                <h3>Envíos</h3>
+                <p>Enviamos tu pedido</p>
+            </div>
+
+        </div>
+
+        <div class="benefit">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <div>
+                <h3>Compra segura</h3>
+                <p>Compra con confianza</p>
+            </div>
+
+        </div>
+
+        <div class="benefit">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            <div>
+                <h3>Atención directa</h3>
+                <p>WhatsApp 24/7</p>
+            </div>
+
+        </div>
+
+        <div class="benefit">
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            <div>
+                <h3>Pago fácil</h3>
+                <p>Nequi y otros medios</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTOS
+    ========================== -->
+
+    <section class="products-section" id="productos">
+
+        <div class="section-title">
+
+            <span>NUESTRA COLECCIÓN</span>
+
+            <h2>
+                Gorras <strong>KingCap</strong>
+            </h2>
+
+            <p>
+                Elige tu estilo favorito y agrégalo al carrito.
+            </p>
+
+        </div>
+
+
+        <div class="products-grid" id="productsGrid">
+
+            <!-- PRODUCTO 1 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <span class="product-badge">
+                        NUEVO
+                    </span>
+
+                    <img
+                        src="img/gorra1.jpg"
+                        alt="Gorra KingCap Negra">
+
+                    <button
+                        class="quick-add"
+                        onclick="addToCart(1)">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        KINGCAP
+                    </span>
+
+                    <h3>
+                        Gorra KingCap Black
+                    </h3>
+
+                    <p class="product-description">
+                        Gorra premium color negro.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">
+                            $50.000
+                        </strong>
+
+                        <button
+                            class="add-button"
+                            onclick="addToCart(1)">
+
+                            Agregar
+
+                            <i class="fa-solid fa-cart-plus"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCTO 2 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <span class="product-badge">
+                        POPULAR
+                    </span>
+
+                    <img
+                        src="img/gorra2.jpg"
+                        alt="Gorra KingCap Blanca">
+
+                    <button
+                        class="quick-add"
+                        onclick="addToCart(2)">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        KINGCAP
+                    </span>
+
+                    <h3>
+                        Gorra KingCap White
+                    </h3>
+
+                    <p class="product-description">
+                        Diseño blanco clásico y moderno.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">
+                            $50.000
+                        </strong>
+
+                        <button
+                            class="add-button"
+                            onclick="addToCart(2)">
+
+                            Agregar
+
+                            <i class="fa-solid fa-cart-plus"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCTO 3 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <span class="product-badge">
+                        DESTACADA
+                    </span>
+
+                    <img
+                        src="img/gorra3.jpg"
+                        alt="Gorra KingCap Roja">
+
+                    <button
+                        class="quick-add"
+                        onclick="addToCart(3)">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        KINGCAP
+                    </span>
+
+                    <h3>
+                        Gorra KingCap Red
+                    </h3>
+
+                    <p class="product-description">
+                        Diseño rojo para destacar.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">
+                            $50.000
+                        </strong>
+
+                        <button
+                            class="add-button"
+                            onclick="addToCart(3)">
+
+                            Agregar
+
+                            <i class="fa-solid fa-cart-plus"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCTO 4 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="img/gorra4.jpg"
+                        alt="Gorra KingCap Premium">
+
+                    <button
+                        class="quick-add"
+                        onclick="addToCart(4)">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        PREMIUM
+                    </span>
+
+                    <h3>
+                        Gorra KingCap Premium
+                    </h3>
+
+                    <p class="product-description">
+                        Diseño exclusivo KingCap.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong class="price">
+                            $60.000
+                        </strong>
+
+                        <button
+                            class="add-button"
+                            onclick="addToCart(4)">
+
+                            Agregar
+
+                            <i class="fa-solid fa-cart-plus"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         NOSOTROS
+    ========================== -->
+
+    <section class="about" id="nosotros">
+
+        <div class="about-content">
+
+            <span>
+                SOBRE KINGCAP
+            </span>
+
+            <h2>
+                Más que una gorra,
+                <strong>un estilo.</strong>
+            </h2>
+
+            <p>
+                En KingCap buscamos ofrecer gorras con diseños modernos,
+                cómodos y con personalidad. Queremos que cada cliente
+                encuentre una gorra que represente su estilo.
+            </p>
+
+            <a
+                href="https://wa.me/573219272653?text=Hola%20KingCap,%20quiero%20conocer%20más%20sobre%20sus%20gorras."
+                target="_blank"
+                class="about-button">
+
+                Hablar con KingCap
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+        </div>
+
+        <div class="about-logo">
+
+            <div class="big-k">
+                K
+            </div>
+
+            <span>
+                KINGCAP
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+
+    <section class="contact" id="contacto">
+
+        <div class="section-title">
+
+            <span>CONTACTO</span>
+
+            <h2>
+                ¿Tienes alguna pregunta?
+            </h2>
+
+            <p>
+                Estamos disponibles para ayudarte con tu compra.
+            </p>
+
+        </div>
+
+        <div class="contact-grid">
+
+            <a
+                href="https://wa.me/573219272653"
+                target="_blank"
+                class="contact-card">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <h3>
+                    WhatsApp
+                </h3>
+
+                <p>
+                    +57 321 927 2653
+                </p>
+
+            </a>
+
+
+            <a
+                href="mailto:Kingcagwork11@gmail.com"
+                class="contact-card">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <h3>
+                    Correo
+                </h3>
+
+                <p>
+                    Kingcagwork11@gmail.com
+                </p>
+
+            </a>
+
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-money-bill-transfer"></i>
+
+                <h3>
+                    Nequi
+                </h3>
+
+                <p>
+                    321 927 2653
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            King<span>Cap</span>
+        </div>
+
+        <p>
+            © 2026 KingCap. Todos los derechos reservados.
+        </p>
+
+        <div class="footer-social">
+
+            <a
+                href="https://wa.me/573219272653"
+                target="_blank">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+            <a
+                href="mailto:Kingcagwork11@gmail.com">
+
+                <i class="fa-solid fa-envelope"></i>
+
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         CARRITO
+    ========================== -->
+
+    <div
+        class="cart-overlay"
+        id="cartOverlay">
+
+    </div>
+
+
+    <aside
+        class="cart"
+        id="cart">
+
+        <div class="cart-header">
+
+            <div>
+
+                <span>
+                    KINGCAP
+                </span>
+
+                <h2>
+                    Tu carrito
+                </h2>
+
+            </div>
+
+            <button
+                id="closeCart"
+                class="close-cart">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-items"
+            id="cartItems">
+
+            <!-- JavaScript -->
+
+        </div>
+
+
+        <div
+            class="empty-cart"
+            id="emptyCart">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <h3>
+                Tu carrito está vacío
+            </h3>
+
+            <p>
+                Agrega una gorra para comenzar.
+            </p>
+
+            <button
+                onclick="closeCart()">
+
+                Ver gorras
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-footer"
+            id="cartFooter">
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cartTotal">
+                    $0
+                </strong>
+
+            </div>
+
+
+            <button
+                class="checkout-whatsapp"
+                onclick="checkoutWhatsApp()">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                Comprar por WhatsApp
+
+            </button>
+
+
+            <button
+                class="checkout-nequi"
+                onclick="checkoutNequi()">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Pagar con Nequi
+
+            </button>
+
+
+            <small>
+                Al comprar, confirmaremos contigo los datos
+                de envío y disponibilidad.
+            </small>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MODAL DE COMPRA
+    ========================== -->
+
+    <div
+        class="modal"
+        id="checkoutModal">
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                onclick="closeCheckoutModal()">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+            <div class="modal-icon">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </div>
+
+            <h2>
+                ¡Casi listo!
+            </h2>
+
+            <p>
+                Vamos a preparar tu pedido de KingCap.
+            </p>
+
+
+            <form id="checkoutForm">
+
+                <div class="form-group">
+
+                    <label>
+                        Nombre
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Tu nombre"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Ciudad
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerCity"
+                        placeholder="Tu ciudad"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Dirección
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerAddress"
+                        placeholder="Dirección de entrega"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Método de pago
+                    </label>
+
+                    <select id="paymentMethod">
+
+                        <option value="Nequi">
+                            Nequi
+                        </option>
+
+                        <option value="Contraentrega">
+                            Contraentrega
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="send-order">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Confirmar pedido
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
