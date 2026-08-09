@@ -3,14 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KingCap— Raíces de barrio, estilo de rey</title>
+    <title>𝓐.𝓥.𝓖 𝓼𝓽𝓻𝓮𝓮𝓽𝓼⚡ — Raíces de barrio, estilo de rey</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== ESTILOS WHATSAPP ===== */
+        .whatsapp-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            max-width: 420px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: #ffffff !important;
+            padding: 1.1rem 1.5rem;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-whatsapp i {
+            font-size: 1.9rem;
+            filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6), 
+                        0 0 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover i {
+            transform: scale(1.2) rotate(5deg);
+            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.9));
+        }
+
+        /* ===== PIE DE PÁGINA Y TIKTOK ===== */
+        footer {
+            background: rgb(10, 10, 10);
+            color: rgb(200, 200, 200);
+            text-align: center;
+            padding: 3.5rem 2rem;
+            font-size: 0.95rem;
+            border-top: 4px solid rgb(60, 60, 60);
+            margin-top: 2rem;
+        }
+
+        .tiktok-seccion {
+            margin: 2rem 0;
+        }
+
+        .btn-tiktok {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(135deg, #000000, #222222);
+            border: 2px solid #ff0050;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(255, 0, 80, 0.3);
+        }
+
+        .btn-tiktok i {
+            font-size: 2rem;
+            color: #ff0050;
+            transition: all 0.3s ease;
+        }
+
+        .btn-tiktok:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(255, 0, 80, 0.5),
+                        0 0 15px rgba(0, 242, 234, 0.4);
+            border-color: #00f2ea;
+        }
+
+        .btn-tiktok:hover i {
+            transform: scale(1.2);
+            color: #00f2ea;
+        }
+    </style>
 </head>
 <body>
     <!-- Encabezado -->
     <header>
         <div class="logo">
-            <h1>KingCap</h1>
+            <h1>𝓐.𝓥.𝓖 𝓼𝓽𝓻𝓮𝓮𝓽𝓼⚡</h1>
             <span>Raíces de barrio, estilo de rey</span>
         </div>
         <nav>
@@ -49,7 +147,6 @@
                             data-precio="45000">Agregar al carrito</button>
                 </div>
             </div>
-
             <!-- Producto 2 -->
             <div class="producto">
                 <div class="imagen-contenedor">
@@ -64,7 +161,6 @@
                             data-precio="55000">Agregar al carrito</button>
                 </div>
             </div>
-
             <!-- Producto 3 -->
             <div class="producto">
                 <div class="imagen-contenedor">
@@ -79,7 +175,6 @@
                             data-precio="48000">Agregar al carrito</button>
                 </div>
             </div>
-
             <!-- Producto 4 -->
             <div class="producto">
                 <div class="imagen-contenedor">
@@ -94,22 +189,20 @@
                             data-precio="42000">Agregar al carrito</button>
                 </div>
             </div>
-
             <!-- Producto 5 -->
             <div class="producto">
                 <div class="imagen-contenedor">
-                    <img src="https://via.placeholder.com/400x300?text=Gorra+Kingcaps+Logo" alt="Gorra Kingcaps Logo">
+                    <img src="https://via.placeholder.com/400x300?text=Gorra+Logo" alt="Gorra Logo 𝓐.𝓥.𝓖 𝓼𝓽𝓻𝓮𝓮𝓽𝓼⚡">
                 </div>
                 <div class="info">
-                    <h3>Gorra Kingcaps Logo</h3>
-                    <p>Edición especial — Con logo bordado</p>
+                    <h3>Gorra con Logo</h3>
+                    <p>Edición especial — Con logo bordado de 𝓐.𝓥.𝓖 𝓼𝓽𝓻𝓮𝓮𝓽𝓼⚡</p>
                     <div class="precio">$ 65.000 COP</div>
                     <button class="btn-agregar" 
-                            data-nombre="Gorra Kingcaps Logo" 
+                            data-nombre="Gorra con Logo" 
                             data-precio="65000">Agregar al carrito</button>
                 </div>
             </div>
-
             <!-- Producto 6 -->
             <div class="producto">
                 <div class="imagen-contenedor">
@@ -146,13 +239,13 @@
         <p>Haz tu pedido directo por WhatsApp. Te respondemos al instante.</p>
         <div class="whatsapp-links">
             <a href="https://wa.me/573003983775" target="_blank" class="btn-whatsapp">
-                🟢 +57 300 3983775
+                <i class="fa-brands fa-whatsapp"></i> +57 300 3983775
             </a>
             <a href="https://wa.me/573219272643" target="_blank" class="btn-whatsapp">
-                🟢 +57 321 9272643
+                <i class="fa-brands fa-whatsapp"></i> +57 321 9272643
             </a>
             <a href="https://wa.me/573228896147" target="_blank" class="btn-whatsapp">
-                🟢 +57 322 8896147
+                <i class="fa-brands fa-whatsapp"></i> +57 322 8896147
             </a>
         </div>
         <div class="correo">
@@ -162,7 +255,14 @@
 
     <!-- Pie de página -->
     <footer>
-        <p>&copy; 2026 Kingcaps — Raíces de barrio, estilo de rey. Todos los derechos reservados.</p>
+        <h3>Síguenos en redes sociales</h3>
+        <div class="tiktok-seccion">
+            <a href="https://tiktok.com/@king_cap777" target="_blank" class="btn-tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+                Visita nuestro TikTok
+            </a>
+        </div>
+        <p>&copy; 2026 𝓐.𝓥.𝓖 𝓼𝓽𝓻𝓮𝓮𝓽𝓼⚡ — Raíces de barrio, estilo de rey.<br>Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
