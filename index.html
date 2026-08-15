@@ -48,7 +48,7 @@
 
         .btn-whatsapp i {
             font-size: 1.9rem;
-            filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+            filter: drop-shadow(0 0 6px rgba(255,255,255,0.6));
             transition: all 0.3s ease;
         }
 
@@ -60,17 +60,17 @@
 
         .btn-whatsapp:hover i {
             transform: scale(1.2) rotate(5deg);
-            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.9));
+            filter: drop-shadow(0 0 12px rgba(255,255,255,0.9));
         }
 
         /* ===== PIE DE PÁGINA Y TIKTOK ===== */
         footer {
-            background: rgb(10, 10, 10);
-            color: rgb(200, 200, 200);
+            background: rgb(10,10,10);
+            color: rgb(200,200,200);
             text-align: center;
             padding: 3.5rem 2rem;
             font-size: 0.95rem;
-            border-top: 4px solid rgb(60, 60, 60);
+            border-top: 4px solid rgb(60,60,60);
             margin-top: 2rem;
         }
 
@@ -92,7 +92,7 @@
             border-radius: 12px;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(255, 0, 80, 0.3);
+            box-shadow: 0 4px 12px rgba(255,0,80,0.3);
         }
 
         .btn-tiktok i {
@@ -103,14 +103,35 @@
 
         .btn-tiktok:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(255, 0, 80, 0.5),
-                        0 0 15px rgba(0, 242, 234, 0.4);
+            box-shadow: 0 8px 20px rgba(255,0,80,0.5),
+                        0 0 15px rgba(0,242,234,0.4);
             border-color: #00f2ea;
         }
 
         .btn-tiktok:hover i {
             transform: scale(1.2);
             color: #00f2ea;
+        }
+
+        /* ===== NUEVO: Separador de secciones ===== */
+        .separador-seccion {
+            text-align: center;
+            margin: 4rem 0 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgb(80,80,80);
+        }
+        .separador-seccion h2 {
+            font-size: 2.2rem;
+            color: rgb(255,255,255);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        .subtitulo-seccion {
+            text-align: center;
+            color: rgb(180,180,180);
+            font-size: 1rem;
+            margin-top: -0.5rem;
+            margin-bottom: 2rem;
         }
     </style>
 </head>
@@ -124,7 +145,10 @@
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
+                <li><a href="#gorras">🧢 Gorras</a></li>
+                <li><a href="#ropa">👕 Ropa</a></li>
+                <!-- Cuando agregues calzado, solo quita los comentarios debajo -->
+                <!-- <li><a href="#calzado">👟 Calzado</a></li> -->
                 <li><a href="#contacto">Contacto</a></li>
                 <li class="carrito-icon">
                     <a href="#" id="verCarrito">🛒 Carrito (<span id="cantidadCarrito">0</span>)</a>
@@ -136,12 +160,17 @@
     <!-- Sección Inicio -->
     <section id="inicio" class="inicio">
         <h2>Raíces de barrio, estilo de rey 👑</h2>
-        <p>Las mejores gorras, con calidad que se nota y estilo que se respeta. Del barrio para el mundo. ¡Póntela y representa!</p>
+        <p>Las mejores gorras, ropa y accesorios. Calidad que se nota y estilo que se respeta. Del barrio para el mundo. ¡Póntela y representa!</p>
     </section>
 
-    <!-- Sección Productos -->
-    <section id="productos" class="productos">
-        <h2>Nuestras Gorras</h2>
+    <!-- ========================================
+        SECCIÓN 1: GORRAS — TAL CUAL LA TENÍAS
+        ======================================== -->
+    <div class="separador-seccion" id="gorras">
+        <h2>🧢 Nuestras Gorras</h2>
+    </div>
+    <p class="subtitulo-seccion">Estilo, calidad y comodidad para tu día a día</p>
+    <section class="productos">
         <div class="grid-productos">
             <!-- Producto 1 -->
             <div class="producto">
@@ -229,6 +258,102 @@
             </div>
         </div>
     </section>
+
+    <!-- ========================================
+        SECCIÓN 2: ROPA — NUEVA, LISTA PARA LLENAR
+        ======================================== -->
+    <div class="separador-seccion" id="ropa">
+        <h2>👕 Nuestra Ropa</h2>
+    </div>
+    <p class="subtitulo-seccion">Estilo urbano que se lleva en la piel — Calidad y diseño 𝓐.𝓥.𝓖</p>
+    <section class="productos">
+        <div class="grid-productos">
+            <!-- ROPA Producto 1 → CAMISETA -->
+            <div class="producto">
+                <div class="imagen-contenedor">
+                    <img src="https://via.placeholder.com/400x300?text=Camiseta+B%C3%A1sica" alt="Camiseta Básica">
+                </div>
+                <div class="info">
+                    <h3>Camiseta Básica</h3>
+                    <p>Algodón premium — Cómoda y con diseño limpio</p>
+                    <div class="precio">$ 55.000 COP</div>
+                    <button class="btn-agregar" 
+                            data-nombre="Camiseta Básica" 
+                            data-precio="55000">Agregar al carrito</button>
+                </div>
+            </div>
+            <!-- ROPA Producto 2 -->
+            <div class="producto">
+                <div class="imagen-contenedor">
+                    <img src="https://via.placeholder.com/400x300?text=Sudadera+Con+Capucha" alt="Sudadera con Capucha">
+                </div>
+                <div class="info">
+                    <h3>Sudadera con Capucha</h3>
+                    <p>Abrigo y estilo — Diseño exclusivo 𝓐.𝓥.𝓖</p>
+                    <div class="precio">$ 95.000 COP</div>
+                    <button class="btn-agregar" 
+                            data-nombre="Sudadera con Capucha" 
+                            data-precio="95000">Agregar al carrito</button>
+                </div>
+            </div>
+            <!-- ROPA Producto 3 -->
+            <div class="producto">
+                <div class="imagen-contenedor">
+                    <img src="https://via.placeholder.com/400x300?text=Pantal%C3%B3n+Urbano" alt="Pantalón Urbano">
+                </div>
+                <div class="info">
+                    <h3>Pantalón Urbano</h3>
+                    <p>Corte moderno — Resistente y cómodo</p>
+                    <div class="precio">$ 110.000 COP</div>
+                    <button class="btn-agregar" 
+                            data-nombre="Pantalón Urbano" 
+                            data-precio="110000">Agregar al carrito</button>
+                </div>
+            </div>
+            <!-- ROPA Producto 4 → PLACEHOLDER para que agregues más -->
+            <div class="producto">
+                <div class="imagen-contenedor">
+                    <img src="https://via.placeholder.com/400x300?text=Pr%C3%B3ximamente" alt="Más modelos pronto">
+                </div>
+                <div class="info">
+                    <h3>Próximamente más modelos</h3>
+                    <p>Nuevos diseños llegando pronto — ¡Síguenos en redes!</p>
+                    <div class="precio">—</div>
+                    <button class="btn-agregar" style="opacity:0.5;cursor:not-allowed;" disabled>Próximamente</button>
+                </div>
+            </div>
+            <!-- Agrega más productos de ropa aquí siguiendo el mismo patrón -->
+        </div>
+    </section>
+
+    <!-- ========================================
+        SECCIÓN 3: CALZADO — ESTRUCTURADA PERO OCULTA
+        Cuando quieras vender calzado, quita los comentarios y pega tus productos
+        ======================================== -->
+    <!--
+    <div class="separador-seccion" id="calzado">
+        <h2>👟 Calzado</h2>
+    </div>
+    <p class="subtitulo-seccion">Pisa fuerte — Calzado diseñado para destacar</p>
+    <section class="productos">
+        <div class="grid-productos">
+            <div class="producto">
+                <div class="imagen-contenedor">
+                    <img src="https://via.placeholder.com/400x300?text=Zapatillas+Urbanas" alt="Zapatillas Urbanas">
+                </div>
+                <div class="info">
+                    <h3>Zapatillas Urbanas</h3>
+                    <p>Comodidad todo el día — Suela resistente</p>
+                    <div class="precio">$ 145.000 COP</div>
+                    <button class="btn-agregar" 
+                            data-nombre="Zapatillas Urbanas" 
+                            data-precio="145000">Agregar al carrito</button>
+                </div>
+            </div>
+             Agrega más calzado siguiendo el mismo patrón 
+        </div>
+    </section>
+    -->
 
     <!-- Ventana del Carrito -->
     <div id="modalCarrito" class="modal">

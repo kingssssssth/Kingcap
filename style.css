@@ -522,7 +522,7 @@ footer {
 }
 
 /* ========================================
-   RESPONSIVIDAD
+   RESPONSIVIDAD — TU CÓDIGO ORIGINAL
 ======================================== */
 @media (max-width: 768px) {
     header {
@@ -562,5 +562,79 @@ footer {
 
     .modal-contenido {
         padding: 2rem 1.5rem;
+    }
+}
+
+/* ========================================
+   ✅ AJUSTE ENCABEZADO COMPACTO EN CELULAR
+   ======================================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        padding: 0.6rem 3% !important;
+        gap: 0.4rem !important;
+        align-items: center !important;
+    }
+
+    .logo {
+        max-width: 120px !important;
+        text-align: left !important;
+    }
+
+    .logo .imagen-logo {
+        max-width: 90px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .logo span {
+        display: none !important;
+    }
+
+    nav {
+        flex: 1 !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+
+    nav ul {
+        gap: 0.4rem !important;
+        flex-wrap: wrap !important;
+        justify-content: flex-end !important;
+    }
+
+    nav a {
+        font-size: 0.8rem !important;
+        padding: 0.25rem 0.45rem !important;
+    }
+
+    .carrito-icon a {
+        padding: 0.35rem 0.6rem !important;
+        font-size: 0.78rem !important;
+        white-space: nowrap !important;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem 2% !important;
+    }
+
+    .logo {
+        max-width: 80px !important;
+    }
+
+    .logo .imagen-logo {
+        max-width: 70px !important;
+    }
+
+    nav a {
+        font-size: 0.72rem !important;
+        padding: 0.2rem 0.35rem !important;
+    }
+
+    .carrito-icon a {
+        padding: 0.3rem 0.5rem !important;
+        font-size: 0.7rem !important;
     }
 }
