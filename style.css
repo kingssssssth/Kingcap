@@ -14,24 +14,26 @@ html {
 
 body {
     font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-    /* 🌈 FONDO LLAMATIVO — COLORES VIBRANTES EN GRADIENTE */
-    background: linear-gradient(135deg, 
-        rgb(26, 0, 58) 0%, 
-        rgb(70, 0, 140) 25%, 
-        rgb(120, 0, 180) 50%, 
-        rgb(180, 20, 100) 75%, 
-        rgb(220, 50, 80) 100%);
-    background-size: 400% 400%;
-    animation: fondoAnimado 12s ease infinite;
+    /* 🌌 FONDO CON LUZ CAMBIANTE — AZUL, PÚRPURA Y MAGENTA */
+    background: linear-gradient(225deg, 
+        rgb(10, 15, 40) 0%, 
+        rgb(30, 20, 80) 25%, 
+        rgb(60, 20, 120) 50%, 
+        rgb(80, 15, 100) 75%, 
+        rgb(50, 10, 90) 100%);
+    background-size: 600% 600%;
+    animation: luzCambiante 15s ease infinite;
     color: rgb(255, 255, 255);
     line-height: 1.7;
     min-height: 100vh;
 }
 
-@keyframes fondoAnimado {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+@keyframes luzCambiante {
+    0%   { background-position: 0% 0%; }
+    25%  { background-position: 100% 50%; }
+    50%  { background-position: 50% 100%; }
+    75%  { background-position: 0% 50%; }
+    100% { background-position: 0% 0%; }
 }
 
 a {
@@ -55,78 +57,75 @@ button {
 }
 
 /* ========================================
-   PALETA DE COLORES — NEON INTENSO
+   PALETA DE COLORES — ARMONÍA PERFECTA
 ======================================== */
 :root {
     --blanco: rgb(255, 255, 255);
-    --negro-profundo: rgb(5, 2, 15);
-    --neon-azul: rgb(0, 230, 255);
-    --neon-celeste: rgb(0, 255, 200);
-    --neon-verde: rgb(50, 255, 120);
-    --neon-amarillo: rgb(255, 240, 0);
-    --neon-naranja: rgb(255, 140, 0);
-    --neon-rosa: rgb(255, 20, 140);
-    --neon-morado: rgb(150, 0, 255);
-    --neon-violeta: rgb(200, 0, 220);
-    --sombra-azul: 0 0 15px rgba(0, 230, 255, 0.7), 0 0 30px rgba(0, 230, 255, 0.4), 0 0 45px rgba(0, 230, 255, 0.2);
-    --sombra-verde: 0 0 15px rgba(50, 255, 120, 0.7), 0 0 30px rgba(50, 255, 120, 0.4), 0 0 45px rgba(50, 255, 120, 0.2);
-    --sombra-morado: 0 0 15px rgba(150, 0, 255, 0.7), 0 0 30px rgba(150, 0, 255, 0.4), 0 0 45px rgba(150, 0, 255, 0.2);
-    --sombra-rosa: 0 0 15px rgba(255, 20, 140, 0.7), 0 0 30px rgba(255, 20, 140, 0.4), 0 0 45px rgba(255, 20, 140, 0.2);
-    --sombra-blanca: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.4);
+    --azul-electrico: rgb(0, 140, 255);
+    --azul-profundo: rgb(0, 80, 200);
+    --indigo-neon: rgb(80, 60, 255);
+    --purpura-neon: rgb(120, 40, 220);
+    --violeta-neon: rgb(160, 30, 200);
+    --magenta-neon: rgb(200, 20, 180);
+    --rosa-neon: rgb(230, 40, 150);
+    --dorado-neon: rgb(255, 215, 0);
+
+    --brillo-azul: 0 0 15px rgba(0, 140, 255, 0.6), 0 0 30px rgba(0, 140, 255, 0.35), 0 0 45px rgba(0, 140, 255, 0.15);
+    --brillo-purpura: 0 0 15px rgba(120, 40, 220, 0.6), 0 0 30px rgba(120, 40, 220, 0.35), 0 0 45px rgba(120, 40, 220, 0.15);
+    --brillo-magenta: 0 0 15px rgba(200, 20, 180, 0.6), 0 0 30px rgba(200, 20, 180, 0.35), 0 0 45px rgba(200, 20, 180, 0.15);
+    --brillo-dorado: 0 0 12px rgba(255, 215, 0, 0.6), 0 0 25px rgba(255, 215, 0, 0.3);
     --transicion: all 0.3s ease;
 }
 
 /* ========================================
-   ANIMACIONES RGB INTENSAS
+   ANIMACIONES EFECTO LUZ
 ======================================== */
-@keyframes brilloRGB {
-    0%   { box-shadow: var(--sombra-azul); border-color: var(--neon-azul); }
-    25%  { box-shadow: var(--sombra-verde); border-color: var(--neon-verde); }
-    50%  { box-shadow: var(--sombra-amarillo); border-color: var(--neon-amarillo); }
-    75%  { box-shadow: var(--sombra-rosa); border-color: var(--neon-rosa); }
-    100% { box-shadow: var(--sombra-morado); border-color: var(--neon-morado); }
+@keyframes brilloArmonico {
+    0%   { box-shadow: var(--brillo-azul); border-color: var(--azul-electrico); }
+    33%  { box-shadow: var(--brillo-purpura); border-color: var(--purpura-neon); }
+    66%  { box-shadow: var(--brillo-magenta); border-color: var(--magenta-neon); }
+    100% { box-shadow: var(--brillo-azul); border-color: var(--azul-electrico); }
 }
 
-@keyframes bordeRGB {
-    0%   { border-color: var(--neon-celeste); box-shadow: inset 0 0 12px rgba(0, 230, 255, 0.4); }
-    33%  { border-color: var(--neon-verde); box-shadow: inset 0 0 12px rgba(50, 255, 120, 0.4); }
-    66%  { border-color: var(--neon-rosa); box-shadow: inset 0 0 12px rgba(255, 20, 140, 0.4); }
-    100% { border-color: var(--neon-morado); box-shadow: inset 0 0 12px rgba(150, 0, 255, 0.4); }
+@keyframes bordeLuz {
+    0%   { border-image: linear-gradient(90deg, var(--azul-electrico), var(--indigo-neon)) 1; }
+    50%  { border-image: linear-gradient(90deg, var(--purpura-neon), var(--magenta-neon)) 1; }
+    100% { border-image: linear-gradient(90deg, var(--rosa-neon), var(--azul-electrico)) 1; }
 }
 
-@keyframes pulsar {
+@keyframes pulsarSuave {
     0%   { filter: brightness(1); }
-    50%  { filter: brightness(1.3); }
+    50%  { filter: brightness(1.2); }
     100% { filter: brightness(1); }
 }
 
-@keyframes entrada {
-    from { opacity: 0; transform: translateY(40px) scale(0.9); }
-    to   { opacity: 1; transform: translateY(0) scale(1); }
+@keyframes entradaSuave {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes brilloTexto {
-    from { text-shadow: 0 0 8px rgba(255,255,255,0.4), 0 0 20px rgba(0, 230, 255, 0.3); }
-    to   { text-shadow: 0 0 15px rgba(255,255,255,0.9), 0 0 35px rgba(255, 20, 140, 0.5), 0 0 50px rgba(150, 0, 255, 0.3); }
+@keyframes textoLuz {
+    from { text-shadow: 0 0 10px rgba(255,255,255,0.4), 0 0 20px rgba(0, 140, 255, 0.3); }
+    to   { text-shadow: 0 0 15px rgba(255,255,255,0.7), 0 0 30px rgba(200, 20, 180, 0.4), 0 0 45px rgba(120, 40, 220, 0.25); }
 }
 
 /* ========================================
-   ENCABEZADO — LLAMATIVO Y BRILLANTE
+   ENCABEZADO
 ======================================== */
 header {
-    background: linear-gradient(90deg, rgba(10, 2, 30, 0.95), rgba(60, 0, 100, 0.9));
+    background: linear-gradient(90deg, rgba(5, 8, 30, 0.96), rgba(40, 15, 80, 0.92));
     color: var(--blanco);
     padding: 1.2rem 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 30px rgba(0, 230, 255, 0.3), 0 6px 40px rgba(0,0,0,0.8);
+    box-shadow: 0 0 30px rgba(0, 140, 255, 0.2), 0 6px 40px rgba(0,0,0,0.7);
     position: sticky;
     top: 0;
     z-index: 999;
     border-bottom: 3px solid transparent;
-    border-image: linear-gradient(90deg, var(--neon-celeste), var(--neon-verde), var(--neon-amarillo), var(--neon-naranja), var(--neon-rosa), var(--neon-morado)) 1;
-    backdrop-filter: blur(10px);
+    border-image: linear-gradient(90deg, var(--azul-electrico), var(--purpura-neon), var(--magenta-neon), var(--rosa-neon), var(--azul-electrico)) 1;
+    backdrop-filter: blur(12px);
 }
 
 .logo h1 {
@@ -134,18 +133,17 @@ header {
     letter-spacing: 6px;
     font-weight: 900;
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 25px var(--neon-celeste), 0 0 40px var(--neon-rosa);
-    animation: brilloTexto 2s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 25px var(--azul-electrico), 0 0 40px var(--magenta-neon);
+    animation: textoLuz 2.5s ease-in-out infinite alternate;
 }
 
 .logo span {
     font-size: 0.85rem;
-    color: rgb(220, 220, 255);
+    color: rgb(210, 200, 255);
     display: block;
     margin-top: -5px;
     letter-spacing: 4px;
     font-weight: 600;
-    text-shadow: 0 0 6px rgba(255,255,255,0.4);
 }
 
 nav ul {
@@ -155,7 +153,7 @@ nav ul {
 }
 
 nav a {
-    color: rgb(240, 240, 255);
+    color: rgb(230, 225, 255);
     font-weight: 700;
     font-size: 1rem;
     position: relative;
@@ -167,13 +165,13 @@ nav a {
 
 nav a:hover {
     color: var(--blanco);
-    background: rgba(255, 255, 255, 0.1);
-    animation: brilloRGB 1.5s linear infinite;
+    background: rgba(100, 60, 255, 0.12);
+    animation: brilloArmonico 1.8s linear infinite;
     transform: translateY(-3px);
 }
 
 .carrito-icon a {
-    background: linear-gradient(135deg, var(--neon-morado), var(--neon-rosa));
+    background: linear-gradient(135deg, var(--purpura-neon), var(--magenta-neon));
     color: var(--blanco);
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
@@ -183,12 +181,12 @@ nav a:hover {
     border: 3px solid transparent;
     transition: var(--transicion);
     font-weight: 900;
-    box-shadow: 0 4px 15px rgba(150, 0, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(120, 40, 220, 0.4);
 }
 
 .carrito-icon a:hover {
     transform: translateY(-4px) scale(1.08);
-    animation: brilloRGB 1.2s linear infinite;
+    animation: brilloArmonico 1.5s linear infinite;
 }
 
 /* ========================================
@@ -196,7 +194,7 @@ nav a:hover {
 ======================================== */
 section {
     padding: 5rem 6%;
-    animation: entrada 0.8s ease-out forwards;
+    animation: entradaSuave 0.8s ease-out forwards;
 }
 
 section h2 {
@@ -208,18 +206,20 @@ section h2 {
     position: relative;
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-shadow: 0 0 10px rgba(255,255,255,0.6), 0 0 25px var(--neon-celeste), 0 0 40px var(--neon-rosa);
+    text-shadow: 0 0 10px rgba(255,255,255,0.6), 0 0 25px var(--azul-electrico), 0 0 40px var(--magenta-neon);
 }
 
 section h2::after {
     content: "";
     display: block;
-    width: 180px;
+    width: 200px;
     height: 5px;
-    background: linear-gradient(90deg, var(--neon-celeste), var(--neon-verde), var(--neon-amarillo), var(--neon-naranja), var(--neon-rosa), var(--neon-morado));
+    background: linear-gradient(90deg, var(--azul-electrico), var(--indigo-neon), var(--purpura-neon), var(--magenta-neon), var(--rosa-neon), var(--azul-electrico));
+    background-size: 400% 100%;
+    animation: luzCambiante 6s linear infinite;
     margin: 1.2rem auto 0;
     border-radius: 3px;
-    box-shadow: 0 0 20px rgba(255,255,255,0.6), 0 0 30px var(--neon-rosa);
+    box-shadow: 0 0 15px rgba(0, 140, 255, 0.5), 0 0 30px rgba(200, 20, 180, 0.3);
 }
 
 /* ========================================
@@ -228,12 +228,12 @@ section h2::after {
 .inicio {
     text-align: center;
     padding: 5.5rem 6%;
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.12), transparent 70%),
-                linear-gradient(180deg, rgba(20, 0, 50, 0.8), rgba(80, 0, 120, 0.6));
+    background: radial-gradient(ellipse at center top, rgba(100, 80, 255, 0.12), transparent 65%),
+                linear-gradient(180deg, rgba(10, 8, 40, 0.9), rgba(50, 20, 100, 0.6));
     border-bottom: 4px solid transparent;
-    border-image: linear-gradient(90deg, var(--neon-celeste), var(--neon-verde), var(--neon-amarillo), var(--neon-naranja), var(--neon-rosa), var(--neon-morado)) 1;
+    border-image: linear-gradient(90deg, var(--azul-electrico), var(--purpura-neon), var(--magenta-neon), var(--rosa-neon), var(--azul-electrico)) 1;
     border-radius: 0 0 50px 50px;
-    box-shadow: 0 10px 50px rgba(0,0,0,0.6), inset 0 0 60px rgba(255, 20, 140, 0.08);
+    box-shadow: 0 10px 50px rgba(0,0,0,0.6), inset 0 0 60px rgba(120, 40, 220, 0.08);
 }
 
 .inicio h2 {
@@ -245,23 +245,23 @@ section h2::after {
     font-size: 1.35rem;
     max-width: 750px;
     margin: 0 auto;
-    color: rgb(255, 230, 250);
+    color: rgb(230, 225, 255);
     font-weight: 600;
     text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 /* ========================================
-   PRODUCTOS — CAJAS OSCURAS PARA QUE DESTAQUEN
+   PRODUCTOS — CAJAS OSCURAS PARA DESTACAR
 ======================================== */
 .productos {
-    background: linear-gradient(145deg, rgba(5, 2, 20, 0.96), rgba(30, 5, 60, 0.9));
+    background: linear-gradient(145deg, rgba(5, 5, 25, 0.96), rgba(35, 10, 70, 0.9));
     border-radius: 30px;
     margin: 2.5rem 4%;
     box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.9), 
-                0 0 40px rgba(0, 230, 255, 0.15), 
-                0 0 60px rgba(255, 20, 140, 0.1);
+                0 0 40px rgba(0, 140, 255, 0.12), 
+                0 0 60px rgba(200, 20, 180, 0.08);
     border: 3px solid transparent;
-    border-image: linear-gradient(135deg, var(--neon-celeste), var(--neon-verde), var(--neon-amarillo), var(--neon-rosa), var(--neon-morado)) 1;
+    border-image: linear-gradient(135deg, var(--azul-electrico), var(--purpura-neon), var(--magenta-neon), var(--rosa-neon)) 1;
     position: relative;
     overflow: hidden;
 }
@@ -273,9 +273,10 @@ section h2::after {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at 15% 15%, rgba(0, 230, 255, 0.08), transparent 45%),
-                radial-gradient(circle at 85% 85%, rgba(255, 20, 140, 0.08), transparent 45%);
+    background: radial-gradient(circle at 20% 20%, rgba(0, 140, 255, 0.06), transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(200, 20, 180, 0.06), transparent 50%);
     pointer-events: none;
+    animation: luzCambiante 20s ease infinite;
 }
 
 .grid-productos {
@@ -287,10 +288,10 @@ section h2::after {
 }
 
 .producto {
-    background: linear-gradient(145deg, rgba(15, 5, 40, 0.95), rgba(40, 10, 70, 0.9));
+    background: linear-gradient(145deg, rgba(12, 8, 40, 0.95), rgba(45, 15, 85, 0.9));
     border-radius: 20px;
     overflow: hidden;
-    border: 3px solid rgba(100, 100, 255, 0.35);
+    border: 3px solid rgba(100, 80, 255, 0.3);
     transition: var(--transicion);
     position: relative;
     backdrop-filter: blur(5px);
@@ -298,17 +299,17 @@ section h2::after {
 
 .producto:hover {
     transform: translateY(-15px) scale(1.04);
-    animation: bordeRGB 2s linear infinite;
+    animation: brilloArmonico 2s linear infinite;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9),
-                0 0 30px rgba(0, 230, 255, 0.3),
-                0 0 50px rgba(255, 20, 140, 0.2),
-                inset 0 0 30px rgba(255, 255, 255, 0.08);
+                0 0 30px rgba(0, 140, 255, 0.25),
+                0 0 50px rgba(200, 20, 180, 0.15),
+                inset 0 0 30px rgba(255, 255, 255, 0.06);
 }
 
 .imagen-contenedor {
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(40, 20, 80, 0.8), rgba(20, 10, 50, 0.9));
-    border-bottom: 2px solid rgba(150, 100, 255, 0.3);
+    background: linear-gradient(135deg, rgba(50, 25, 100, 0.8), rgba(20, 10, 50, 0.9));
+    border-bottom: 2px solid rgba(120, 80, 255, 0.25);
 }
 
 .producto img {
@@ -321,7 +322,7 @@ section h2::after {
 
 .producto:hover img {
     transform: scale(1.12);
-    filter: brightness(1.25) contrast(1.15) saturate(1.2);
+    filter: brightness(1.25) contrast(1.15);
 }
 
 .producto .info {
@@ -333,11 +334,11 @@ section h2::after {
     font-size: 1.25rem;
     font-weight: 900;
     margin-bottom: 0.5rem;
-    text-shadow: 0 0 8px rgba(255,255,255,0.5), 0 0 15px var(--neon-celeste);
+    text-shadow: 0 0 8px rgba(255,255,255,0.4), 0 0 15px var(--azul-electrico);
 }
 
 .producto p {
-    color: rgb(230, 220, 255);
+    color: rgb(220, 210, 255);
     font-size: 0.95rem;
     margin-bottom: 1rem;
     font-weight: 600;
@@ -346,16 +347,16 @@ section h2::after {
 .precio {
     font-size: 1.7rem;
     font-weight: 900;
-    color: var(--neon-amarillo);
+    color: var(--dorado-neon);
     margin-bottom: 1.2rem;
     letter-spacing: -1px;
-    text-shadow: 0 0 10px rgba(255, 240, 0, 0.6), 0 0 20px rgba(255, 240, 0, 0.3);
-    animation: pulsar 2s ease-in-out infinite;
+    text-shadow: var(--brillo-dorado);
+    animation: pulsarSuave 2s ease-in-out infinite;
 }
 
 .btn-agregar {
     width: 100%;
-    background: linear-gradient(135deg, var(--neon-morado), var(--neon-rosa));
+    background: linear-gradient(135deg, var(--purpura-neon), var(--magenta-neon));
     color: var(--blanco);
     border: 3px solid transparent;
     padding: 1rem;
@@ -366,12 +367,12 @@ section h2::after {
     transition: var(--transicion);
     letter-spacing: 1px;
     text-transform: uppercase;
-    box-shadow: 0 4px 15px rgba(150, 0, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(120, 40, 220, 0.4);
 }
 
 .btn-agregar:hover {
     transform: translateY(-4px);
-    animation: brilloRGB 1.2s linear infinite;
+    animation: brilloArmonico 1.5s linear infinite;
     color: var(--blanco);
 }
 
@@ -383,7 +384,7 @@ section h2::after {
     position: fixed;
     z-index: 1000;
     inset: 0;
-    background: radial-gradient(ellipse at center, rgba(20, 0, 50, 0.96), rgba(5, 0, 20, 0.98));
+    background: radial-gradient(ellipse at center, rgba(15, 5, 50, 0.96), rgba(5, 2, 25, 0.98));
     backdrop-filter: blur(15px);
     align-items: center;
     justify-content: center;
@@ -391,7 +392,7 @@ section h2::after {
 }
 
 .modal-contenido {
-    background: linear-gradient(145deg, rgba(25, 5, 60, 0.98), rgba(60, 10, 100, 0.9));
+    background: linear-gradient(145deg, rgba(25, 8, 60, 0.98), rgba(55, 15, 100, 0.92));
     padding: 2.5rem;
     border-radius: 24px;
     width: 100%;
@@ -400,9 +401,9 @@ section h2::after {
     overflow-y: auto;
     position: relative;
     border: 3px solid transparent;
-    border-image: linear-gradient(135deg, var(--neon-celeste), var(--neon-verde), var(--neon-amarillo), var(--neon-rosa), var(--neon-morado)) 1;
-    box-shadow: 0 0 50px rgba(0, 230, 255, 0.3), 0 0 80px rgba(255, 20, 140, 0.2);
-    animation: entrada 0.4s ease-out;
+    border-image: linear-gradient(135deg, var(--azul-electrico), var(--purpura-neon), var(--magenta-neon), var(--rosa-neon)) 1;
+    box-shadow: 0 0 50px rgba(0, 140, 255, 0.25), 0 0 80px rgba(200, 20, 180, 0.15);
+    animation: entradaSuave 0.4s ease-out;
 }
 
 .modal-contenido h2 {
@@ -411,7 +412,7 @@ section h2::after {
     margin-bottom: 1.8rem;
     font-size: 2.1rem;
     font-weight: 900;
-    text-shadow: 0 0 10px rgba(255,255,255,0.7), 0 0 25px var(--neon-celeste), 0 0 40px var(--neon-rosa);
+    text-shadow: 0 0 10px rgba(255,255,255,0.7), 0 0 25px var(--azul-electrico), 0 0 40px var(--magenta-neon);
 }
 
 .cerrar {
@@ -419,7 +420,7 @@ section h2::after {
     top: 1rem;
     right: 1.2rem;
     font-size: 2.8rem;
-    color: rgb(255, 200, 255);
+    color: rgb(230, 210, 255);
     cursor: pointer;
     transition: var(--transicion);
     font-weight: bold;
@@ -427,9 +428,9 @@ section h2::after {
 }
 
 .cerrar:hover {
-    color: var(--neon-rosa);
+    color: var(--rosa-neon);
     transform: rotate(90deg) scale(1.4);
-    text-shadow: 0 0 20px rgba(255, 20, 140, 0.8);
+    text-shadow: 0 0 20px rgba(230, 40, 150, 0.7);
 }
 
 #listaCarrito {
@@ -441,13 +442,13 @@ section h2::after {
     justify-content: space-between;
     align-items: center;
     padding: 1.1rem;
-    border-bottom: 2px solid rgba(150, 100, 255, 0.35);
+    border-bottom: 2px solid rgba(120, 80, 255, 0.3);
     transition: background-color 0.25s ease;
     border-radius: 10px;
 }
 
 .item-carrito:hover {
-    background: rgba(100, 50, 200, 0.2);
+    background: rgba(100, 60, 200, 0.18);
 }
 
 .item-carrito .info-nombre {
@@ -457,14 +458,14 @@ section h2::after {
 }
 
 .item-carrito .info-precio {
-    color: var(--neon-amarillo);
+    color: var(--dorado-neon);
     font-weight: 900;
     font-size: 1.05rem;
-    text-shadow: 0 0 8px rgba(255, 240, 0, 0.5);
+    text-shadow: var(--brillo-dorado);
 }
 
 .item-carrito .eliminar {
-    background: linear-gradient(135deg, rgb(220, 30, 80), rgb(180, 10, 60));
+    background: linear-gradient(135deg, rgb(200, 30, 90), rgb(160, 15, 70));
     color: var(--blanco);
     border: none;
     padding: 0.55rem 0.9rem;
@@ -473,12 +474,12 @@ section h2::after {
     font-size: 0.85rem;
     font-weight: 800;
     transition: var(--transicion);
-    box-shadow: 0 3px 12px rgba(220, 30, 80, 0.4);
+    box-shadow: 0 3px 12px rgba(200, 30, 90, 0.35);
 }
 
 .item-carrito .eliminar:hover {
     transform: scale(1.15);
-    box-shadow: 0 5px 20px rgba(220, 30, 80, 0.6), 0 0 15px rgba(255, 50, 100, 0.4);
+    box-shadow: 0 5px 20px rgba(200, 30, 90, 0.55), 0 0 15px rgba(255, 60, 120, 0.35);
 }
 
 .total {
@@ -486,14 +487,14 @@ section h2::after {
     font-size: 1.7rem;
     margin: 1.5rem 0 0.5rem;
     padding-top: 1.2rem;
-    border-top: 3px solid rgba(150, 100, 255, 0.4);
+    border-top: 3px solid rgba(120, 80, 255, 0.35);
     color: var(--blanco);
     font-weight: 900;
-    text-shadow: 0 0 10px rgba(255, 240, 0, 0.4);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.35);
 }
 
 .btn-comprar {
-    background: linear-gradient(135deg, rgb(30, 230, 100), rgb(20, 200, 80));
+    background: linear-gradient(135deg, rgb(40, 200, 120), rgb(25, 170, 95));
     color: var(--blanco);
     border: none;
     padding: 1.1rem;
@@ -504,30 +505,30 @@ section h2::after {
     cursor: pointer;
     margin-top: 1rem;
     transition: var(--transicion);
-    box-shadow: 0 4px 15px rgba(30, 230, 100, 0.4);
+    box-shadow: 0 4px 15px rgba(40, 200, 120, 0.35);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .btn-comprar:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(30, 230, 100, 0.6), 0 0 25px rgba(50, 255, 120, 0.3);
+    box-shadow: 0 8px 30px rgba(40, 200, 120, 0.55), 0 0 25px rgba(80, 255, 160, 0.25);
 }
 
 /* ========================================
    SECCIÓN CONTACTO
 ======================================== */
 .contacto {
-    background: radial-gradient(ellipse at center bottom, rgba(255, 20, 140, 0.1), transparent 60%),
-                linear-gradient(180deg, rgba(30, 0, 60, 0.9), rgba(80, 10, 120, 0.7));
+    background: radial-gradient(ellipse at center bottom, rgba(200, 20, 180, 0.08), transparent 60%),
+                linear-gradient(180deg, rgba(20, 8, 50, 0.9), rgba(60, 15, 110, 0.65));
     text-align: center;
     border-top: 4px solid transparent;
-    border-image: linear-gradient(90deg, var(--neon-celeste), var(--neon-verde), var(--neon-amarillo), var(--neon-naranja), var(--neon-rosa), var(--neon-morado)) 1;
+    border-image: linear-gradient(90deg, var(--azul-electrico), var(--purpura-neon), var(--magenta-neon), var(--rosa-neon), var(--azul-electrico)) 1;
 }
 
 .contacto p {
     font-size: 1.2rem;
-    color: rgb(240, 230, 255);
+    color: rgb(230, 220, 255);
     margin-bottom: 2rem;
     font-weight: 600;
 }
@@ -541,52 +542,52 @@ section h2::after {
 }
 
 .btn-whatsapp {
-    background: linear-gradient(135deg, rgb(30, 220, 100), rgb(20, 180, 80));
+    background: linear-gradient(135deg, rgb(35, 210, 110), rgb(25, 180, 90));
     color: var(--blanco);
     padding: 1.1rem;
     border-radius: 12px;
     font-weight: 900;
     font-size: 1.05rem;
     transition: var(--transicion);
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .btn-whatsapp:hover {
     transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5), 0 0 20px rgba(50, 255, 120, 0.3);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5), 0 0 20px rgba(80, 255, 160, 0.25);
 }
 
 .correo {
     margin-top: 1.5rem;
     font-size: 1.1rem;
-    color: rgb(230, 220, 255);
+    color: rgb(220, 210, 255);
 }
 
 .correo a {
-    color: var(--neon-celeste);
+    color: var(--azul-electrico);
     font-weight: 900;
     text-decoration: underline;
     transition: all 0.25s ease;
 }
 
 .correo a:hover {
-    color: var(--neon-rosa);
-    text-shadow: 0 0 12px rgba(255, 20, 140, 0.6);
+    color: var(--rosa-neon);
+    text-shadow: 0 0 12px rgba(230, 40, 150, 0.5);
 }
 
 /* ========================================
    PIE DE PÁGINA
 ======================================== */
 footer {
-    background: linear-gradient(180deg, rgba(10, 0, 30, 0.98), rgba(40, 0, 80, 0.9));
-    color: rgb(210, 200, 255);
+    background: linear-gradient(180deg, rgba(8, 5, 30, 0.98), rgba(35, 10, 70, 0.92));
+    color: rgb(200, 190, 240);
     text-align: center;
     padding: 2.5rem 2rem;
     font-size: 0.95rem;
     border-top: 4px solid transparent;
-    border-image: linear-gradient(90deg, var(--neon-celeste), var(--neon-verde), var(--neon-amarillo), var(--neon-naranja), var(--neon-rosa), var(--neon-morado)) 1;
+    border-image: linear-gradient(90deg, var(--azul-electrico), var(--purpura-neon), var(--magenta-neon), var(--rosa-neon), var(--azul-electrico)) 1;
 }
 
 /* ========================================
