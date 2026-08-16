@@ -1,5 +1,5 @@
 // ========================================
-// CARRITO DE COMPRAS — Kingcaps
+// CARRITO DE COMPRAS — A.V.G STREET
 // ========================================
 
 // Variables principales

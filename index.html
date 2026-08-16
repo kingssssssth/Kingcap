@@ -133,6 +133,99 @@
             margin-top: -0.5rem;
             margin-bottom: 2rem;
         }
+
+        /* ===== SECCIONES NUEVAS ===== */
+        .por-que-comprar, .como-comprar, .faq, .sobre-nosotros {
+            padding: 4rem 6%;
+        }
+        .ventajas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .ventaja {
+            background: rgba(30, 20, 60, 0.5);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid rgba(100, 80, 255, 0.25);
+            transition: all 0.3s ease;
+        }
+        .ventaja:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 230, 255, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 140, 255, 0.15);
+        }
+        .ventaja span {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+        .ventaja h3 {
+            color: rgb(255, 255, 255);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .ventaja p {
+            color: rgb(200, 200, 220);
+            font-size: 0.95rem;
+        }
+        .pasos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .paso {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        .paso .numero {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgb(0, 140, 255), rgb(150, 0, 255));
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin: 0 auto 1rem;
+            box-shadow: 0 0 20px rgba(0, 140, 255, 0.4);
+        }
+        .paso p {
+            color: rgb(230, 220, 255);
+            font-weight: 600;
+        }
+        .pregunta {
+            background: rgba(30, 15, 60, 0.4);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border-left: 4px solid rgb(0, 230, 255);
+        }
+        .pregunta h3 {
+            color: rgb(255, 255, 255);
+            margin-bottom: 0.6rem;
+            font-size: 1.05rem;
+        }
+        .pregunta p {
+            color: rgb(210, 210, 230);
+            line-height: 1.6;
+        }
+        .sobre-nosotros {
+            background: rgba(20, 10, 50, 0.3);
+            border-radius: 20px;
+            margin: 2rem 4%;
+        }
+        .sobre-nosotros p {
+            color: rgb(225, 220, 255);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0.8rem auto;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -327,6 +420,92 @@
     </section>
 
     <!-- ========================================
+        SECCIÓN: ¿POR QUÉ COMPRAR CON NOSOTROS?
+        ======================================== -->
+    <div class="separador-seccion">
+        <h2>¿Por qué elegirnos?</h2>
+    </div>
+    <section class="por-que-comprar">
+        <div class="ventajas">
+            <div class="ventaja">
+                <span>✅</span>
+                <h3>Calidad Garantizada</h3>
+                <p>Productos elaborados con los mejores materiales</p>
+            </div>
+            <div class="ventaja">
+                <span>🚚</span>
+                <h3>Envío Rápido</h3>
+                <p>Entregamos a todo el país</p>
+            </div>
+            <div class="ventaja">
+                <span>🔒</span>
+                <h3>Compra Segura</h3>
+                <p>Pago directo y protegido por WhatsApp</p>
+            </div>
+            <div class="ventaja">
+                <span>⭐</span>
+                <h3>Estilo Único</h3>
+                <p>Diseños que no encontrarás en otro lugar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+        SECCIÓN: ¿CÓMO COMPRAR?
+        ======================================== -->
+    <div class="separador-seccion">
+        <h2>¿Cómo comprar?</h2>
+    </div>
+    <section class="como-comprar">
+        <div class="pasos">
+            <div class="paso">
+                <div class="numero">1</div>
+                <p>Elige tus productos y agrégalos al carrito</p>
+            </div>
+            <div class="paso">
+                <div class="numero">2</div>
+                <p>Da clic en "Comprar por WhatsApp"</p>
+            </div>
+            <div class="paso">
+                <div class="numero">3</div>
+                <p>Te escribimos al instante para confirmar</p>
+            </div>
+            <div class="paso">
+                <div class="numero">4</div>
+                <p>¡Recibes tu pedido en la puerta de tu casa!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+        SECCIÓN: PREGUNTAS FRECUENTES
+        ======================================== -->
+    <div class="separador-seccion">
+        <h2>Preguntas Frecuentes</h2>
+    </div>
+    <section class="faq">
+        <div class="pregunta">
+            <h3>📦 ¿Cuánto tarda en llegar mi pedido?</h3>
+            <p>Enviamos en máximo 24 horas. El tiempo de entrega depende de tu ciudad, usualmente de 2 a 5 días hábiles en todo Colombia.</p>
+        </div>
+        <div class="pregunta">
+            <h3>💳 ¿Qué formas de pago aceptan?</h3>
+            <p>Puedes pagar por transferencia, Nequi, Daviplata o contraentrega en algunas zonas. Te explicamos todo por WhatsApp.</p>
+        </div>
+    </section>
+
+    <!-- ========================================
+        SECCIÓN: SOBRE NOSOTROS
+        ======================================== -->
+    <div class="separador-seccion">
+        <h2>Sobre Nosotros</h2>
+    </div>
+    <section class="sobre-nosotros">
+        <p>Somos un emprendimiento nacido en <strong>Purificacion, Tolima</strong>, creado con pasión y dedicación. No vendemos solo ropa ni gorras, vendemos estilo, identidad y calidad. Representamos las raíces del barrio con la actitud de un rey. Cada producto es elegido con cuidado para que luzcas bien y te sientas orgulloso.</p>
+        <p>📍 <strong>Envíos a toda Colombia</strong> | ⭐ <strong>Calidad comprobada</strong> | 💬 <strong>Atención personalizada</strong></p>
+    </section>
+
+    <!-- ========================================
         SECCIÓN 3: CALZADO — ESTRUCTURADA PERO OCULTA
         Cuando quieras vender calzado, quita los comentarios y pega tus productos
         ======================================== -->
@@ -350,7 +529,6 @@
                             data-precio="145000">Agregar al carrito</button>
                 </div>
             </div>
-             Agrega más calzado siguiendo el mismo patrón 
         </div>
     </section>
     -->
